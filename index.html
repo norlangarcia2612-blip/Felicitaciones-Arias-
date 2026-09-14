@@ -55,8 +55,8 @@ h2{font-size:32px;color:#f5d8ff;margin:8px 0 18px}p{font-size:18px;line-height:1
 <div class="card">
 <h2>📸 FELICITACIONES 🤍 </h2>
 <p class="edit" contenteditable="true"> Es usted una persona Maravillosa y muy carismatica 😇.</p>
-<div class="gallery"><button class="photo" onclick="openLightbox(0)"><img src="fotos/Foto1.wbp" alt="Recuerdo 1"><span>♡</span></button>
-ton class="photo" onclick="openLightbox(1)"><img src="fotos/Foto2.wbp" alt="Recuerdo 2"><span>♡</span></button>
+div class="gallery"><button class="photo" onclick="openLightbox(0)"><img src="Foto1.wbp" alt="Recuerdo 1"><span>♡</span></button>
+ton class="photo" onclick="openLightbox(1)"><img src="Foto 2.wbp" alt="Recuerdo 2"><span>♡</span></button>
 <button class="photo" onclick="openLightbox(0)"><img
 src="foto1.webp" alt="Recuerdo 1">
 <span>♡</span></button>
@@ -89,9 +89,6 @@ src="Foto 8.webp" alt="Recuerdo 8">
 src="Foto 9.webp" alt="Recuerdo 9">
 <span>♡</span></button>
 
-<button class="photo" onclick="openLightbox(8)"><img
-src="foto2.webp" alt="Recuerdo 2">
-<span>♡</span></button>
 <button class="btn" onclick="go(4)">💌 Leer el mensaje final</button>
 </div>
 </section>
@@ -115,7 +112,7 @@ Espero que pase un cumpleaños maravilloso, rodeada de cariño y de las personas
 <audio id="musica" src="music.mp3" preload="auto"></audio>
   
 <script>
-const photos=['Fotoñ1.wbp','Foto 2.wbp','Foto 3.wbp','Foto 4.wbp','Foto 5.wbp','Foto 6.wbp','Foto 8.wbp','Foto 9.wbp'];
+const photos=['foto1.wbp','foto 2.wbp','Foto 3.wbp','Foto 4.wbp','Foto 5.wbp','Foto 6.wbp','Foto 8.wbp','Foto 9.wbp'];
 function confetti(n=180){const c=document.getElementById('confetti');c.innerHTML='';for(let i=0;i<n;i++){let x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.animationDelay=(Math.random()*1.2)+'s';x.style.background=['#f8d477','#f472b6','#8b5cf6','#60a5fa','#fff'][Math.floor(Math.random()*5)];x.style.transform='rotate('+Math.random()*360+'deg)';c.appendChild(x)}setTimeout(()=>c.innerHTML='',4500)}
 function go(n){for(let i=1;i<=4;i++)document.getElementById('s'+i).classList.add('hidden');document.getElementById('s'+n).classList.remove('hidden');window.scrollTo(0,0)}
 function reveal(){confetti();go(2);setTimeout(()=>document.getElementById('bar').style.width='100%',400)}
