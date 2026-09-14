@@ -82,7 +82,7 @@ h2{font-size:clamp(42px,8vw,70px);color:#66516f;margin:10px 0 22px}
       <label class="fileLabel">
         <input id="musicInput" type="file" accept="audio/*">
       </label>
-      <audio id="music" src="musica.mp3" loop preload="auto"></audio>
+      <audio id="music" src="Mañanitas.Mp3" loop preload="auto"></audio>
       <div style="margin-top:7px;opacity:.75">Mañanitas.Mp3.</div>
     </div>
   </div>
@@ -174,5 +174,17 @@ function celebrate(){
   }
 }
 </script>
+  <script>
+  const openBtn = document.getElementById('openBtn');
+  const music = document.getElementById('music');
+
+  openBtn.addEventListener('click', () => {
+    // Intenta reproducir la música al hacer clic
+    music.play().catch(error => {
+      console.log("No se pudo reproducir el audio automáticamente:", error);
+    });
+  });
+</script>
+
 </body>
 </html>
