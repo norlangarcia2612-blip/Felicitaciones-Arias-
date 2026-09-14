@@ -273,12 +273,12 @@ h2{
       <div>🎵 Música de fondo</div>
 
       <label class="fileLabel">
-        <input id="musicInput" type="file" accept="audio/*">
+      
       </label>
 
-      <audio id="music" src="mananitas.Mp3" loop preload="auto"></audio>
+      <audio id="music" src="mananitas.mp3" loop preload="auto"></audio>
 
-      <div style="margin-top:7px;opacity:.75">mananitas.Mp3</div>
+      <div style="margin-top:7px;opacity:.75">mananitas.mp3</div>
     </div>
   </div>
 </section>
@@ -342,16 +342,7 @@ const openBtn = document.getElementById('openBtn');
 const intro = document.getElementById('intro');
 const main = document.getElementById('main');
 const music = document.getElementById('music');
-const input = document.getElementById('musicInput');
 
-input.addEventListener('change', () => {
-  const file = input.files[0];
-
-  if (file) {
-    music.src = URL.createObjectURL(file);
-    music.play().catch(() => {});
-  }
-});
 
 openBtn.addEventListener('click', async () => {
   // Abrir la sorpresa
