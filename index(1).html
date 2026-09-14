@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una sorpresa para usted ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Montserrat,sans-serif;background:#f7efe9;color:#3f3030}
+body{overflow-x:hidden}
+.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.hidden{display:none!important}
+.intro{background:radial-gradient(circle at 20% 20%,#fff 0 12%,transparent 32%),linear-gradient(135deg,#efe3f3,#f8eee7 50%,#e4f1f0);text-align:center}
+.card{width:min(680px,94vw);background:rgba(255,255,255,.86);backdrop-filter:blur(8px);border-radius:28px;padding:42px 28px;box-shadow:0 20px 70px rgba(90,65,65,.16);border:1px solid rgba(255,255,255,.8);position:relative;z-index:3}
+.kicker{letter-spacing:4px;text-transform:uppercase;font-size:12px;color:#8c6f83;font-weight:600}
+h1,h2{font-family:"DM Serif Display",serif;font-weight:400}
+h1{font-size:clamp(48px,10vw,82px);margin:12px 0 10px;color:#66516f}
+.subtitle{font-size:16px;line-height:1.8;color:#66595a;max-width:520px;margin:0 auto 26px}
+button{border:0;border-radius:999px;padding:15px 28px;font:600 14px Montserrat,sans-serif;cursor:pointer;background:#705879;color:#fff;box-shadow:0 10px 25px rgba(112,88,121,.25);transition:.2s}
+button:hover{transform:translateY(-2px)}
+.musicBox{margin-top:16px;font-size:12px;color:#806f70}
+.main{background:linear-gradient(160deg,#fbf5f1,#f2e8f3 55%,#e7f1f0)}
+.content{width:min(820px,94vw);text-align:center;position:relative;z-index:3}
+.badge{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#90718b}
+h2{font-size:clamp(42px,8vw,70px);color:#66516f;margin:10px 0 22px}
+.message{background:rgba(255,255,255,.88);border-radius:25px;padding:30px 25px;box-shadow:0 15px 50px rgba(82,61,70,.12);line-height:1.9;font-size:15px;color:#574a4b}
+.message p{margin:0 0 15px}.message p:last-child{margin-bottom:0}
+.photos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+.photo{background:#fff;padding:9px;border-radius:20px;box-shadow:0 12px 35px rgba(60,40,50,.14);transform:rotate(-1deg)}
+.photo:nth-child(2){transform:rotate(1deg)}
+.photo img{width:100%;height:290px;object-fit:cover;border-radius:14px;display:block}
+.caption{font-family:"DM Serif Display",serif;color:#765c73;padding:10px 4px 5px;font-size:18px}
+@media(max-width:650px){.photos{grid-template-columns:1fr}.photo img{height:330px}}
+.footer{margin-top:24px;font-family:"DM Serif Display",serif;font-size:25px;color:#705879}
+.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:5;pointer-events:none;animation:fall linear forwards}
+.balloon{position:fixed;bottom:-130px;width:48px;height:62px;border-radius:50% 50% 45% 45%;z-index:1;opacity:.8;animation:rise 9s linear forwards;pointer-events:none}
+.balloon:after{content:"";position:absolute;width:1px;height:70px;background:#8e777d;left:50%;top:60px}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+@keyframes rise{to{transform:translateY(-125vh) translateX(var(--drift))}}
+.spark{position:fixed;font-size:28px;z-index:4;animation:pop 1.8s ease forwards;pointer-events:none}
+@keyframes pop{0%{transform:scale(.2);opacity:0}30%{opacity:1}100%{transform:scale(1.4) translateY(-25px);opacity:0}}
+</style>
+</head>
+
+<body>
+
+<section id="intro" class="screen intro">
+  <div class="card">
+    <div class="kicker">Una pequeña sorpresa</div>
+    <h1>Para ti ❤️</h1>
+    <p class="subtitle">
+      Hay palabras que merecen decirse con calma. Hoy quiero dedicarle unas muy especiales.
+    </p>
+
+    <button id="openBtn" type="button">Abrir la sorpresa ✨</button>
+
+    <div class="musicBox">
+      🎵 Música de fondo
+      <audio id="music" src="./mananitas.mp3" loop preload="auto"></audio>
+    </div>
+  </div>
+</section>
+
+<section id="main" class="screen main hidden">
+  <div class="content">
+    <div class="badge">Con mucho cariño</div>
+    <h2>¡Feliz cumpleaños! 🎂</h2>
+
+    <div class="message">
+      <p>En este día tan especial quiero hacerle llegar mis mejores deseos y recordarle el gran aprecio y cariño que le tengo.</p>
+      <p>Aunque el tiempo pase y la vida nos lleve por distintos caminos, hay personas que permanecen presentes de una manera especial. usted es una de ellas, y siempre le recuerdo con mucho cariño.</p>
+      <p>Deseo sinceramente que este nuevo año de vida llegue acompañado de mucha salud, tranquilidad, alegrías y motivos para sonreír. Que pueda disfrutar cada día y que la vida le conceda muchas cosas bonitas.</p>
+      <p>Espero que pase un cumpleaños maravilloso, rodeada de cariño y de las personas que le aprecian.</p>
+      <p><strong>Reciba un abrazo muy especial y mis mejores deseos hoy y siempre. ❤️</strong></p>
+    </div>
+
+    <div class="photos">
+      <div class="photo">
+        <img src="./foto1.webp" alt="Fotografía especial 1" loading="lazy">
+        <div class="caption">Felicitaciones ✨</div>
+      </div>
+      <div class="photo">
+        <img src="./foto2.webp" alt="Fotografía especial 2" loading="lazy">
+        <div class="caption">Con mucho cariño ❤️</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Que tenga un día tan bonito como merece, ATT:THE GREAT GATSBY🎈
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById('openBtn');
+  const intro = document.getElementById('intro');
+  const main = document.getElementById('main');
+  const music = document.getElementById('music');
+
+  openBtn.addEventListener('click', () => {
+    // Cambiar de pantalla
+    intro.classList.add('hidden');
+    main.classList.remove('hidden');
+
+    // La reproducción se inicia directamente desde el clic del usuario.
+    music.currentTime = 0;
+    const playPromise = music.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch(error => {
+        console.log('No se pudo reproducir la música:', error);
+      });
+    }
+
+    celebrate();
+  });
+
+  function celebrate(){
+    for(let i=0;i<90;i++){
+      const c=document.createElement('div');
+      c.className='confetti';
+      c.style.left=Math.random()*100+'vw';
+      c.style.background=['#b98fc4','#d6a06f','#82b9ba','#e5a8b8','#8d7b9d'][Math.floor(Math.random()*5)];
+      c.style.animationDuration=(3+Math.random()*5)+'s';
+      c.style.animationDelay=Math.random()*2+'s';
+      c.style.transform=`rotate(${Math.random()*360}deg)`;
+      document.body.appendChild(c);
+      setTimeout(()=>c.remove(),9000);
+    }
+
+    for(let i=0;i<14;i++){
+      const b=document.createElement('div');
+      b.className='balloon';
+      b.style.left=(Math.random()*100)+'vw';
+      b.style.background=['#c9a4c8','#e6b1b4','#9dc9c7','#d9b27d'][Math.floor(Math.random()*4)];
+      b.style.animationDuration=(7+Math.random()*5)+'s';
+      b.style.animationDelay=Math.random()*2+'s';
+      b.style.setProperty('--drift',(Math.random()*180-90)+'px');
+      document.body.appendChild(b);
+      setTimeout(()=>b.remove(),14000);
+    }
+
+    const symbols=['✨','❤️','🎉','💐'];
+
+    for(let i=0;i<18;i++){
+      setTimeout(()=>{
+        const s=document.createElement('div');
+        s.className='spark';
+        s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+        s.style.left=(10+Math.random()*80)+'vw';
+        s.style.top=(15+Math.random()*65)+'vh';
+        document.body.appendChild(s);
+        setTimeout(()=>s.remove(),1900);
+      },i*130);
+    }
+  }
+});
+</script>
+
+</body>
+</html>
