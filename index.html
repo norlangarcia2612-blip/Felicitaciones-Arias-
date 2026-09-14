@@ -115,7 +115,7 @@ Espero que pase un cumpleaños maravilloso, rodeada de cariño y de las personas
 <audio id="musica" src="music.mp3" preload="auto"></audio>
   
 <script>
-const photos=['fotos/Foto1.wbp','fotos/Foto2.wbp','fotos/Foto3.wbp','fotos/Foto4.wbp','fotos/Foto5.wbp','fotos/Foto6.wbp','fotos/Foto7.wbp','fotos/Foto8.wbp','fotos/Foto9.wbp'];
+const photos=['Fotoñ1.wbp','Foto 2.wbp','Foto 3.wbp','Foto 4.wbp','Foto 5.wbp','Foto 6.wbp','Foto 8.wbp','Foto 9.wbp'];
 function confetti(n=180){const c=document.getElementById('confetti');c.innerHTML='';for(let i=0;i<n;i++){let x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.animationDelay=(Math.random()*1.2)+'s';x.style.background=['#f8d477','#f472b6','#8b5cf6','#60a5fa','#fff'][Math.floor(Math.random()*5)];x.style.transform='rotate('+Math.random()*360+'deg)';c.appendChild(x)}setTimeout(()=>c.innerHTML='',4500)}
 function go(n){for(let i=1;i<=4;i++)document.getElementById('s'+i).classList.add('hidden');document.getElementById('s'+n).classList.remove('hidden');window.scrollTo(0,0)}
 function reveal(){confetti();go(2);setTimeout(()=>document.getElementById('bar').style.width='100%',400)}
