@@ -77,7 +77,7 @@ h2{font-size:32px;color:#f5d8ff;margin:8px 0 18px}p{font-size:18px;line-height:1
 <p class="edit" contenteditable="true"><b>Que pueda disfrutar cada día y que la vida le conceda muchas cosas bonitas.
 Espero que pase un cumpleaños maravilloso, rodeada de cariño y de las personas que le aprecian. 🎂🎈</b></p>
 <button class="btn" onclick="finale()">🎊 ¡Última sorpresa!</button>
-<div class="music-note">🎵 Canción elegida: <b>“music.mp3”</b><br> </div>
+<div class="music-note">🎵 music.mp3: <b>“music.mp3”</b><br> </div>
 <p class="hint"> </p>
 </div>
 </section>
@@ -85,7 +85,7 @@ Espero que pase un cumpleaños maravilloso, rodeada de cariño y de las personas
 <div id="lightbox" class="lightbox hidden" onclick="closeLightbox()"><button class="close">×</button><img id="big" src="" alt="Foto ampliada"></div>
 
 <script>
-const photos=['fotos/foto1.jpg','fotos/foto2.jpg','fotos/foto3.jpg','fotos/foto4.jpg','fotos/foto5.jpg','fotos/foto6.jpg','fotos/foto7.jpg','fotos/foto8.jpg','fotos/foto9.jpg'];
+const photos=['fotos/Foto 1.wbp','fotos/Foto 2.wbp','fotos/Foto 3.wbp','fotos/Foto 4.wbp','fotos/Foto 5.wbp','fotos/Foto 6.wbp','fotos/Foto 7.wbp','fotos/Foto 8.wbp','fotos/Foto 9.wbp'];
 function confetti(n=180){const c=document.getElementById('confetti');c.innerHTML='';for(let i=0;i<n;i++){let x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.animationDelay=(Math.random()*1.2)+'s';x.style.background=['#f8d477','#f472b6','#8b5cf6','#60a5fa','#fff'][Math.floor(Math.random()*5)];x.style.transform='rotate('+Math.random()*360+'deg)';c.appendChild(x)}setTimeout(()=>c.innerHTML='',4500)}
 function go(n){for(let i=1;i<=4;i++)document.getElementById('s'+i).classList.add('hidden');document.getElementById('s'+n).classList.remove('hidden');window.scrollTo(0,0)}
 function reveal(){confetti();go(2);setTimeout(()=>document.getElementById('bar').style.width='100%',400)}
